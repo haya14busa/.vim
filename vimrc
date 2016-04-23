@@ -7,6 +7,9 @@
 
 let s:rc_base_dir = fnamemodify(expand('<sfile>'), ':p:h') . '/rc/'
 
+let s:vimrc = fnameescape(expand('<sfile>'))
+command! ReloadVimrc :exe 'source ' s:vimrc
+
 " @param {string} path 'relative to s:rc_base_dir(~/.vim/rc/)'
 function! s:source_rc(path) abort
   execute 'source' fnameescape(s:rc_base_dir . a:path)
