@@ -8,6 +8,8 @@
 let g:vimrc_root = fnamemodify(expand('<sfile>:p'), ':p:h')
 let s:rc_base_dir = g:vimrc_root . '/rc/'
 
+execute 'set runtimepath^=' . s:rc_base_dir
+
 augroup MyVimrc
   autocmd!
 augroup END
