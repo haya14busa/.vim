@@ -5,6 +5,7 @@
 " License: MIT license
 "=============================================================================
 
+let g:vimrc_root = fnamemodify(expand('<sfile>:p'), ':p:h')
 let s:rc_base_dir = fnamemodify(expand('<sfile>'), ':p:h') . '/rc/'
 
 let s:vimrc = fnameescape(expand('<sfile>'))
