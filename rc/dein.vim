@@ -11,9 +11,10 @@ endif
 let s:plugin_toml = s:base . '/dein.toml'
 let s:plugin_toml_lazy = s:base . '/dein_lazy.toml'
 
-call dein#begin(s:dein_dir, [s:plugin_toml])
+call dein#begin(s:dein_dir, [s:plugin_toml, s:plugin_toml_lazy])
 
 call dein#load_toml(s:plugin_toml, {'lazy': 0})
+call dein#load_toml(s:plugin_toml_lazy, {'lazy': 1})
 
 call dein#end()
 
