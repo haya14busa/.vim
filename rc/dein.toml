@@ -8,3 +8,7 @@ build = 'make'
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]]
+repo = 'haya14busa/vim-bkup'
+hook_add = 'call rc#plugin#bkup#hook_add()'
