@@ -1,3 +1,4 @@
+let g:dein#types#git#clone_depth = 1
 autocmd MyVimrc VimEnter * call dein#call_hook('post_source')
 
 let s:base = fnamemodify(expand('<sfile>'), ':p:h')
