@@ -4,6 +4,19 @@ if !exists('g:syntax_on')
   syntax enable
 endif
 
+" visibility {{{
+set listchars=tab:▸\
+set list
+
+" hl trailing spaces instead of trail:c
+function! s:hl_trailing_spaces()
+  " Test   
+  highlight! link TrailingSpaces Error
+  syntax match TrailingSpaces containedin=ALL /\s\+$/
+endfunction
+autocmd MyVimrc BufWinEnter,ColorScheme * call s:hl_trailing_spaces()
+" }}}
+
 " colorscheme {{{
 function! s:hl_colorscheme_modify_molokai()
   highlight clear MatchParen
@@ -51,7 +64,7 @@ set softtabstop=2 "Number of spaces that a <Tab> counts for while editing operat
 set tabstop=2 "Number of spaces that a <Tab> in the file counts for
 " }}}
 
-" lang "{{{
+" lang {{{
 language C "Set locale
 set spelllang=en,cjk "Spell checking language
 " }}}
