@@ -13,7 +13,4 @@ function! s:source_rc(path) abort
 endfunction
 
 call s:source_rc('dein.vim')
-
-if !exists('g:syntax_on')
-  syntax enable
-endif
+call s:source_rc('basic.vim')
