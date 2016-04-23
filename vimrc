@@ -21,4 +21,4 @@ function! s:source_rc(path) abort
 endfunction
 
 call s:source_rc('dein.vim')
-call s:source_rc('basic.vim')
+call s:source_rc('option.vim')
