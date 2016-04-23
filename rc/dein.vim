@@ -10,10 +10,10 @@ if !dein#load_state(s:dein_dir)
   finish
 endif
 
-let s:plugin_toml = s:base . '/dein.toml'
-let s:plugin_toml_lazy = s:base . '/dein_lazy.toml'
+let s:plugin_toml = s:base . '/plugin.toml'
+let s:plugin_toml_lazy = s:base . '/plugin_lazy.toml'
 
-call dein#begin(s:dein_dir, [s:plugin_toml, s:plugin_toml_lazy])
+call dein#begin(s:dein_dir, [expand('<sfile>'), s:plugin_toml, s:plugin_toml_lazy])
 
 call dein#load_toml(s:plugin_toml, {'lazy': 0})
 call dein#load_toml(s:plugin_toml_lazy, {'lazy': 1})
