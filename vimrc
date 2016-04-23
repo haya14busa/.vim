@@ -6,7 +6,11 @@
 "=============================================================================
 
 let g:vimrc_root = fnamemodify(expand('<sfile>:p'), ':p:h')
-let s:rc_base_dir = fnamemodify(expand('<sfile>'), ':p:h') . '/rc/'
+let s:rc_base_dir = g:vimrc_root . '/rc/'
+
+augroup MyVimrc
+  autocmd!
+augroup END
 
 let s:vimrc = fnameescape(expand('<sfile>'))
 command! ReloadVimrc :exe 'source ' s:vimrc

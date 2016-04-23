@@ -1,8 +1,10 @@
+autocmd MyVimrc VimEnter * call dein#call_hook('post_source')
+
 let s:base = fnamemodify(expand('<sfile>'), ':p:h')
 
 let s:dein_dir = g:vimrc_root . '/.dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-let &runtimepath = s:dein_repo_dir . ',' . &runtimepath
+execute 'set runtimepath^=' . s:dein_repo_dir
 
 if !dein#load_state(s:dein_dir)
   finish
