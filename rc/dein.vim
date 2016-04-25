@@ -21,7 +21,7 @@ call dein#load_toml(s:plugin_toml_lazy, {'lazy': 1})
 
 call dein#end()
 
-if has('vim_starting') && dein#check_install()
+if dein#check_install()
   call dein#install()
 endif
 
