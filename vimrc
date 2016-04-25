@@ -5,17 +5,23 @@
 " License: MIT license
 "=============================================================================
 
+augroup MyVimrc
+  autocmd!
+augroup END
+
+if has('vim_starting')
+  let g:startuptime = reltime()
+  autocmd MyVimrc VimEnter * let g:startuptime = reltime(g:startuptime) | redraw
+  \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
+endif
+
 let g:vimrc_root = fnamemodify(expand('<sfile>:p'), ':p:h')
 let s:rc_base_dir = g:vimrc_root . '/rc/'
 
 execute 'set runtimepath^=' . s:rc_base_dir
 
-augroup MyVimrc
-  autocmd!
-augroup END
-
 let s:vimrc = fnameescape(expand('<sfile>'))
-command! ReloadVimrc :exe 'source ' s:vimrc
+command! ReloadVimrc :execute 'source ' s:vimrc
 
 " @param {string} path 'relative to s:rc_base_dir(~/.vim/rc/)'
 function! s:source_rc(path) abort
