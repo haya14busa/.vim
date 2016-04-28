@@ -42,6 +42,11 @@ set infercase "Ignore case on insert completion
 set showfulltag "Show rich info for ins-completion
 " }}}
 
+" conceal {{{
+set conceallevel=2
+set concealcursor=iv
+" }}}
+
 " encoding {{{
 set encoding=utf-8 "Sets the character encoding used inside Vim
 set termencoding=utf-8
