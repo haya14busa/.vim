@@ -92,6 +92,7 @@ endif
 " misc {{{
 set autoread "Automatically read file again which has been changed outside of Vim
 set backspace=indent,eol,start "Working of <BS>,<Del>,CTRL-W,CTRL-U
+set colorcolumn=80
 set diffopt+=iwhite "Ignore changes in amount of white space
 set display=lastline "Display as much as possible of the last line
 set grepprg=internal "Program to use for the :grep command
