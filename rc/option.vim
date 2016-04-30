@@ -89,6 +89,14 @@ if has('persistent_undo')
 endif
 "}}}
 
+" viminfo {{{
+set viminfo&
+ " !: store information when you exit Vim for later
+set viminfo+=!
+ " n{filename}: specify viminfo file
+let &viminfo .= ',n' .  g:vimrc_root . '/info/viminfo.txt'
+" }}}
+
 " misc {{{
 set autoread "Automatically read file again which has been changed outside of Vim
 set backspace=indent,eol,start "Working of <BS>,<Del>,CTRL-W,CTRL-U
@@ -109,7 +117,6 @@ set novisualbell "Don't use visual bell instead of beeping
 set nrformats-=octal "Bases Vim will consider for numbers(Ctrl-a,Ctrl-x)
 set ruler "Show the line and column number of the cursor position
 set shortmess+=I "Don't give the message when starting Vim :intro
-set viminfo+=! "Store information when you exit Vim for later
 set virtualedit=block "Cursor can be positioned virtually when Visual-block mode
 set whichwrap=b,s,h,l,[,],<,> "Allow specified keys to move to the previous/next line
 set wrap "Lines longer than the width of the window will wrap
