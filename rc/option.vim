@@ -7,6 +7,7 @@ endif
 " visibility {{{
 set listchars=tab:▸\
 set list
+set showbreak=\
 
 " hl trailing spaces instead of trail:c
 function! s:hl_trailing_spaces()
