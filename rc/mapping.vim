@@ -51,4 +51,7 @@ nnoremap <expr>gp '`['.strpart(getregtype(),0,1).'`]'
 " Don't use register by x
 nnoremap x "_x
 
+" Enter insert mode at the end of line (repeatable)
+nnoremap gA A<C-g>U<Left>
+
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
