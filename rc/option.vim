@@ -5,7 +5,7 @@ if !exists('g:syntax_on')
 endif
 
 " visibility {{{
-set listchars=tab:▸\
+set listchars=tab:▸\ ,
 set list
 set showbreak=\
 
