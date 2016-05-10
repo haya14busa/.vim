@@ -19,6 +19,8 @@ call dein#begin(s:dein_dir, [expand('<sfile>'), s:plugin_toml, s:plugin_toml_laz
 call dein#load_toml(s:plugin_toml, {'lazy': 0})
 call dein#load_toml(s:plugin_toml_lazy, {'lazy': 1})
 
+let s:local_plugin_dir = s:dein_dir . '/repos/local/haya14busa'
+call dein#local(s:local_plugin_dir)
 call dein#end()
 
 if dein#check_install()
