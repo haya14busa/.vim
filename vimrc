@@ -15,10 +15,11 @@ if has('vim_starting')
   \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
 endif
 
-let g:vimrc_root = fnamemodify(expand('<sfile>:p'), ':p:h')
+let g:vimrc = expand('<sfile>')
+let g:vimrc_root = fnamemodify(g:vimrc, ':h')
 let s:rc_base_dir = g:vimrc_root . '/rc/'
 
-execute 'set runtimepath^=' . s:rc_base_dir
+execute 'set runtimepath^=' . fnameescape(s:rc_base_dir)
 
 let s:vimrc = fnameescape(expand('<sfile>'))
 command! ReloadVimrc :execute 'source ' s:vimrc
