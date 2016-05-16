@@ -21,9 +21,6 @@ let s:rc_base_dir = g:vimrc_root . '/rc/'
 
 execute 'set runtimepath^=' . fnameescape(s:rc_base_dir)
 
-let s:vimrc = fnameescape(expand('<sfile>'))
-command! ReloadVimrc :execute 'source ' s:vimrc
-
 " @param {string} path 'relative to s:rc_base_dir(~/.vim/rc/)'
 function! s:source_rc(path) abort
   execute 'source' fnameescape(s:rc_base_dir . a:path)
@@ -33,5 +30,6 @@ call s:source_rc('dein.vim')
 call s:source_rc('option.vim')
 call s:source_rc('mapping.vim')
 call s:source_rc('autocmd.vim')
+call s:source_rc('command.vim')
 
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
