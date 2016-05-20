@@ -39,8 +39,12 @@ endif
 
 " completion {{{
 set completeopt-=preview "Do not use preview window
+set completeopt+=longest
 set infercase "Ignore case on insert completion
 set showfulltag "Show rich info for ins-completion
+
+set wildmenu " Command line autocompletion
+set wildmode=longest,full
 " }}}
 
 " conceal {{{
