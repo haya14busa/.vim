@@ -88,7 +88,7 @@ set hlsearch | nohlsearch "Highlight search patterns, support reloading
 
 " undo {{{
 if has('persistent_undo')
-  let &undodir = g:vimrc_root .'/undo'
+  let &undodir = g:vimrc_root . '/undo'
   set undofile "Automatically saves undo history
   set undoreload=1000 "Save the whole buffer for undo when reloading it
 endif
@@ -101,6 +101,11 @@ set viminfo+=!
  " n{filename}: specify viminfo file
 let &viminfo .= ',n' .  g:vimrc_root . '/info/viminfo.txt'
 " }}}
+
+" swap {{{
+set swapfile "Use a swapfile for the buffer
+let &directory = g:vimrc_root . '/swap'
+"}}}
 
 " misc {{{
 set autoread "Automatically read file again which has been changed outside of Vim
