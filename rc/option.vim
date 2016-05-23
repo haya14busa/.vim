@@ -20,6 +20,9 @@ autocmd MyVimrc BufWinEnter,ColorScheme * call s:hl_trailing_spaces()
 
 " colorscheme {{{
 function! s:hl_colorscheme_modify_molokai()
+  if g:colors_name isnot# 'molokai'
+    return
+  endif
   highlight clear MatchParen
   highlight default MatchParen term=bold ctermfg=166 gui=bold guifg=#ef5939
 endfunction
@@ -72,6 +75,7 @@ set shiftround "Round indent to multiple of 'shiftwidth'
 set shiftwidth=2 "Number of spaces to use for each step of (auto)indent
 set softtabstop=2 "Number of spaces that a <Tab> counts for while editing operations
 set tabstop=2 "Number of spaces that a <Tab> in the file counts for
+let g:vim_indent_cont = 0
 " }}}
 
 " lang {{{

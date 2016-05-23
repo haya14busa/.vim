@@ -1,5 +1,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
+merged = 0
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -10,5 +11,22 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'haya14busa/vim-bkup'
-hook_add = 'call rc#plugin#bkup#hook_add()'
+repo = 'haya14busa/vim-keeppad'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
+
+[[plugins]]
+repo = 'haya14busa/unite-ghq'
+
+[[plugins]]
+repo = 'k0kubun/unite-git-files'
+
+[[plugins]]
+repo = 'lambdalisue/unite-grep-vcs'
+
+[[plugins]]
+repo = 'haya14busa/haya14busa-snippets'

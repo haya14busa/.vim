@@ -1,0 +1,86 @@
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+on_map = '<Plug>'
+on_func = ['EasyMotion#go']
+hook_source = 'call rc#plugin#easymotion#hook_source()'
+hook_add = 'call rc#plugin#easymotion#hook_add()'
+
+[[plugins]]
+repo = 'haya14busa/incsearch.vim'
+on_map = '<Plug>'
+on_func = ['incsearch#go']
+hook_source = 'call rc#plugin#incsearch#hook_source()'
+hook_add = 'call rc#plugin#incsearch#hook_add()'
+
+[[plugins]]
+repo = 'haya14busa/incsearch-easymotion.vim'
+on_source = 'incsearch.vim'
+
+[[plugins]]
+repo = 'haya14busa/incsearch-migemo.vim'
+on_source = 'incsearch.vim'
+
+[[plugins]]
+repo = 'haya14busa/incsearch-fuzzy.vim'
+on_source = 'incsearch.vim'
+
+[[plugins]]
+repo = 'haya14busa/vim-asterisk'
+on_map = [['nx', '<Plug>']]
+hook_source = 'call rc#plugin#asterisk#hook_source()'
+hook_add = 'call rc#plugin#asterisk#hook_add()'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+on_source = 'incsearch.vim'
+on_map = [['n', '<Plug>']]
+
+[[plugins]]
+repo = 'lambdalisue/vim-gita'
+on_cmd = 'Gita'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+on_cmd = 'Unite'
+hook_source = 'call rc#plugin#unite#hook_source()'
+hook_add = 'call rc#plugin#unite#hook_add()'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+on_cmd = 'VimFiler'
+on_map = [['n', '<Plug>']]
+on_if = "isdirectory(bufname('%'))"
+hook_source = 'call rc#plugin#vimfiler#hook_source()'
+hook_add = 'call rc#plugin#vimfiler#hook_add()'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+if = "has('lua')"
+on_i = 1
+hook_source = 'call rc#plugin#neocomplete#hook_source()'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['haya14busa-snippets', 'neocomplete.vim']
+on_i = 1
+on_ft = 'snippet'
+hook_source = 'call rc#plugin#neosnippet#hook_source()'
+
+[[plugins]]
+repo = 'kana/vim-gf-user'
+
+[[plugins]]
+repo = 'hujo/gf-user-vimfn'
+depends = 'vim-gf-user'
+on_ft = ['vim', 'help', 'toml', 'vimspec']
+hook_source = 'call rc#plugin#gf_user_vimfn#hook_source()'
+
+[[plugins]]
+repo = 'tyru/capture.vim'
+on_cmd = 'Capture'
+
+[[plugins]]
+repo = 'thinca/vim-prettyprint'
+on_cmd = 'PP'
+on_func = 'PP'
