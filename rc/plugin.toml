@@ -30,3 +30,6 @@ repo = 'lambdalisue/unite-grep-vcs'
 
 [[plugins]]
 repo = 'haya14busa/haya14busa-snippets'
+
+[[plugins]]
+repo = 'othree/html5.vim'

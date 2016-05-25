@@ -36,10 +36,6 @@ on_source = 'incsearch.vim'
 on_map = [['n', '<Plug>']]
 
 [[plugins]]
-repo = 'lambdalisue/vim-gita'
-on_cmd = 'Gita'
-
-[[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = 'Unite'
 hook_source = 'call rc#plugin#unite#hook_source()'
