@@ -3,7 +3,7 @@ let s:String = vital#vital#import('Data.String')
 
 function! rc#utils#execute(args) abort
   let result = s:Process.execute(a:args)
-  return s:String.chomp(result.output) is# 'true'
+  return s:String.chomp(result.output)
 endfunction
 
 function! rc#utils#is_in_git_repository() abort
