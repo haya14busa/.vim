@@ -1,3 +1,9 @@
+let g:rc#dein#plugins['Shougo/unite.vim'] = {
+\   'on_cmd': 'Unite',
+\   'hook_source': 'call rc#plugin#unite#hook_source()',
+\   'hook_add': 'call rc#plugin#unite#hook_add()',
+\ }
+
 function! rc#plugin#unite#hook_source() abort
   call unite#filters#matcher_default#use(['matcher_fuzzy'])
   call unite#filters#sorter_default#use(['sorter_rank'])
@@ -14,6 +20,5 @@ endfunction
 function! rc#plugin#unite#hook_add() abort
   nnoremap ;u :<C-u>Unite source -start-insert<CR>
   nnoremap ;<Space> :<C-u>Unite file_rec/async:! -start-insert<CR>
-  nnoremap <Space><Space> :<C-u>Unite file_rec/git -start-insert<CR>
   nnoremap ;r :<C-u>UniteResume<CR>
 endfunction

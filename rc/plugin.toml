@@ -23,9 +23,6 @@ repo = 'itchyny/vim-cursorword'
 repo = 'haya14busa/unite-ghq'
 
 [[plugins]]
-repo = 'k0kubun/unite-git-files'
-
-[[plugins]]
 repo = 'lambdalisue/unite-grep-vcs'
 
 [[plugins]]

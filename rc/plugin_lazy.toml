@@ -36,12 +36,6 @@ on_source = 'incsearch.vim'
 on_map = [['n', '<Plug>']]
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-on_cmd = 'Unite'
-hook_source = 'call rc#plugin#unite#hook_source()'
-hook_add = 'call rc#plugin#unite#hook_add()'
-
-[[plugins]]
 repo = 'Shougo/vimfiler.vim'
 depends = 'unite.vim'
 on_cmd = 'VimFiler'
