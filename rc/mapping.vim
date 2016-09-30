@@ -54,4 +54,16 @@ nnoremap x "_x
 " Enter insert mode at the end of line (repeatable)
 nnoremap gA A<C-g>U<Left>
 
+" quickfix
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cpfile<CR>
+nnoremap ]Q :cnfile<CR>
+
+function! s:on_FileType_quickfix()
+  noremap <buffer> p  <CR>zz<C-w>p
+endfunction
+
+autocmd MyVimrc FileType qf call s:on_FileType_quickfix()
+
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker

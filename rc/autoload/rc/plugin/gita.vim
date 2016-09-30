@@ -4,5 +4,5 @@ let g:rc#dein#plugins['lambdalisue/vim-gita'] = {
 \ }
 
 function! rc#plugin#gita#hook_add() abort
-  nnoremap ;gd :<C-u>Gita patch -two<CR>
+  nnoremap ;gd :<C-u>Gita patch --two<CR>
 endfunction

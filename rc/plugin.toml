@@ -10,8 +10,8 @@ build = 'make'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-[[plugins]]
-repo = 'haya14busa/vim-keeppad'
+# [[plugins]]
+# repo = 'haya14busa/vim-keeppad'
 
 [[plugins]]
 repo = 'tomasr/molokai'
@@ -19,8 +19,8 @@ repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'itchyny/vim-cursorword'
 
-[[plugins]]
-repo = 'haya14busa/unite-ghq'
+# [[plugins]]
+# repo = 'haya14busa/unite-ghq'
 
 [[plugins]]
 repo = 'lambdalisue/unite-grep-vcs'
@@ -30,3 +30,6 @@ repo = 'haya14busa/haya14busa-snippets'
 
 [[plugins]]
 repo = 'othree/html5.vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'

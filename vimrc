@@ -5,6 +5,8 @@
 " License: MIT license
 "=============================================================================
 
+if &compatible | set nocompatible | endif
+
 augroup MyVimrc
   autocmd!
 augroup END

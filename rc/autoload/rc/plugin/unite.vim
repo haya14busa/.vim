@@ -21,4 +21,5 @@ function! rc#plugin#unite#hook_add() abort
   nnoremap ;u :<C-u>Unite source -start-insert<CR>
   nnoremap ;<Space> :<C-u>Unite file_rec/async:! -start-insert<CR>
   nnoremap ;r :<C-u>UniteResume<CR>
+  nnoremap ;gr :<C-u>Unite -silent -no-quit grep/git:.<CR>
 endfunction

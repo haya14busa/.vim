@@ -118,6 +118,7 @@ set colorcolumn=80
 set diffopt+=iwhite,vertical "Ignore changes in amount of white space
 set display=lastline "Display as much as possible of the last line
 set grepprg=internal "Program to use for the :grep command
+set helplang& helplang=en,ja " If true Vim master, use English help file
 set hidden "Display another buffer when current buffer isn't saved.
 set history=1024 "Amount of Command history
 set keywordprg=:help "Open Vim internal help by K command
