@@ -29,10 +29,13 @@ function! s:source_rc(path) abort
   execute 'source' fnameescape(s:rc_base_dir . a:path)
 endfunction
 
-call s:source_rc('dein.vim')
 call s:source_rc('option.vim')
 call s:source_rc('mapping.vim')
 call s:source_rc('autocmd.vim')
 call s:source_rc('command.vim')
+
+call s:source_rc('dein.vim')
+call s:source_rc('colorscheme.vim')
+
 
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
