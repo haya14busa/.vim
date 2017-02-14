@@ -4,14 +4,21 @@ let g:rc#dein#plugins['fatih/vim-go'] = {
 \   'hook_add': 'call rc#plugin#go#hook_add()',
 \ }
 
+let g:rc#dein#plugins['haya14busa/vim-gofmt'] = {
+\   'on_ft': 'go',
+\   'hook_source': 'call rc#plugin#go#fmt_hook_source()',
+\   'hook_add': 'call rc#plugin#go#fmt_hook_add()',
+\ }
+
 function! rc#plugin#go#hook_source() abort
   let g:go_bin_path = expand('~/.go/bin')
   let g:go_fmt_experimental = 1
-  " let g:go#use_vimproc = 1
   let g:go_fmt_fail_silently = 1
-  " let g:go_autodetect_gopath = 0
   let g:go_snippet_engine = 'neosnippet'
   let g:go_fmt_command = 'goimports'
+  let g:go_template_autocreate = 0
+  let g:go_echo_go_info = 0
+  let g:go_gocode_unimported_packages = 1
 
   call s:add_path()
 endfunction
@@ -48,4 +55,24 @@ function! s:add_path() abort
       execute 'set path+=' . root . '/src'
     endif
   endif
+endfunction
+
+function! rc#plugin#go#fmt_hook_source() abort
+  let g:go_fmt_autosave = 0 " disable auto gofmt by vim-go
+
+  augroup vim-gofmt
+    autocmd!
+    autocmd BufWritePre *.go :Fmt
+  augroup END
+
+  let g:gofmt_formatters = [
+  \   { 'cmd': 'gofmtrlx', 'args': ['-s', '-w'] },
+  \   { 'cmd': 'goimports', 'args': ['-w'] },
+  \ ]
+  " \   { 'cmd': 'gotypeconv', 'args': ['-w'] },
+  " \   { 'cmd': 'gofmt', 'args': ['-s', '-w'] },
+  " \   { 'cmd': 'goiferr', 'args': ['-w'] },
+endfunction
+
+function! rc#plugin#go#fmt_hook_add() abort
 endfunction
