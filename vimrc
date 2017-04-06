@@ -37,5 +37,8 @@ call s:source_rc('command.vim')
 call s:source_rc('dein.vim')
 call s:source_rc('colorscheme.vim')
 
+if filereadable(s:rc_base_dir . 'local.vim')
+  call s:source_rc('local.vim')
+endif
 
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
