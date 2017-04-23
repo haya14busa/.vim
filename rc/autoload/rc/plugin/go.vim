@@ -5,7 +5,6 @@ let g:rc#dein#plugins['fatih/vim-go'] = {
 \ }
 
 let g:rc#dein#plugins['haya14busa/vim-gofmt'] = {
-\   'on_ft': 'go',
 \   'hook_source': 'call rc#plugin#go#fmt_hook_source()',
 \   'hook_add': 'call rc#plugin#go#fmt_hook_add()',
 \ }
