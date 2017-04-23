@@ -87,6 +87,9 @@ let &viminfo .= ',n' .  g:vimrc_root . '/info/viminfo.txt'
 " swap {{{
 set swapfile "Use a swapfile for the buffer
 let &directory = g:vimrc_root . '/swap'
+if !isdirectory(&directory)
+  call mkdir(&directory)
+endif
 "}}}
 
 " misc {{{
