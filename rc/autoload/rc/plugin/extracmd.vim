@@ -3,6 +3,14 @@ let g:rc#dein#plugins['itchyny/vim-extracmd'] = {
 \ }
 
 function! rc#plugin#extracmd#hook_add() abort
+  try
+    " extracmd may be not installed yet.
+    call s:set()
+  catch
+  endtry
+endfunction
+
+function! s:set() abort
   call extracmd#set('a[ppend]', '')
   call extracmd#set('i[nsert]', '')
   call extracmd#set('waq', 'wqa')
