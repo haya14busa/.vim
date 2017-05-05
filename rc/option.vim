@@ -19,8 +19,16 @@ autocmd MyVimrc BufWinEnter,ColorScheme * call s:hl_trailing_spaces()
 " }}}
 
 " completion {{{
-set completeopt-=preview "Do not use preview window
-set completeopt+=longest
+set completeopt&
+set completeopt+=preview
+" set completeopt+=longest
+set completeopt+=menuone
+" set completeopt+=noinsert
+set completeopt+=noselect
+
+set previewheight=5
+set splitbelow " sohw preview window at bottom
+
 set infercase "Ignore case on insert completion
 set showfulltag "Show rich info for ins-completion
 
