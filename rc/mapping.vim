@@ -68,4 +68,17 @@ autocmd MyVimrc FileType qf call s:on_FileType_quickfix()
 
 nnoremap ;b :<C-u>ls<CR>:b<Space>
 
+"" Yank to Tmux
+" TODO(haya14busa): make a plugin
+" https://sunaku.github.io/tmux-yank-osc52.html
+" copy the current text selection to the system clipboard
+if has('gui_running') && exists('$DISPLAY')
+  noremap ;y "+y
+else
+  " copy to attached terminal using the yank(1) script:
+  " https://github.com/sunaku/home/blob/master/bin/yank
+  nnoremap <silent> ;y :set opfunc=rc#mapping#yank2tmux<CR>g@
+  xnoremap <silent> ;y :<C-u>call rc#mapping#yank2tmux(visualmode(), 1)<CR>
+endif
+
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
