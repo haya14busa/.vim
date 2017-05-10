@@ -5,3 +5,5 @@
 /.dein/
 /view/
 /rc/local.vim
+/eclim/
+/plugin/eclim.vim
