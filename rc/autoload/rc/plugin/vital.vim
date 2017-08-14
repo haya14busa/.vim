@@ -9,6 +9,7 @@ let s:modules = [
 \   'haya14busa/vital-safe-string',
 \   'haya14busa/vital-synblock',
 \   'haya14busa/vital-string-converter',
+\   'haya14busa/vital-clipboard',
 \ ]
 
 for s:m in s:modules
