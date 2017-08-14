@@ -26,7 +26,7 @@ runtime! rc/autoload/rc/plugin/**/*.vim
 call dein#load_dict(g:rc#dein#plugins)
 
 let s:local_plugin_dir = s:dein_dir . '/repos/local/haya14busa'
-call dein#local(s:local_plugin_dir)
+call dein#local(s:local_plugin_dir, {'merge': 0})
 
 call dein#end()
 call dein#save_state()

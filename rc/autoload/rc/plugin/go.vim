@@ -57,6 +57,9 @@ function! s:add_path() abort
 endfunction
 
 function! rc#plugin#go#fmt_hook_source() abort
+endfunction
+
+function! rc#plugin#go#fmt_hook_add() abort
   let g:go_fmt_autosave = 0 " disable auto gofmt by vim-go
 
   augroup vim-gofmt
@@ -71,7 +74,4 @@ function! rc#plugin#go#fmt_hook_source() abort
   " \   { 'cmd': 'gotypeconv', 'args': ['-w'] },
   " \   { 'cmd': 'gofmt', 'args': ['-s', '-w'] },
   " \   { 'cmd': 'goiferr', 'args': ['-w'] },
-endfunction
-
-function! rc#plugin#go#fmt_hook_add() abort
 endfunction
