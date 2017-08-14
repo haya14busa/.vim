@@ -7,3 +7,4 @@
 /rc/local.vim
 /eclim/
 /plugin/eclim.vim
+/rc/autoload/rc/plugin/_local.vim
