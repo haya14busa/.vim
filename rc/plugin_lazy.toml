@@ -6,36 +6,6 @@ hook_source = 'call rc#plugin#easymotion#hook_source()'
 hook_add = 'call rc#plugin#easymotion#hook_add()'
 
 [[plugins]]
-repo = 'haya14busa/incsearch.vim'
-on_map = '<Plug>'
-on_func = ['incsearch#go']
-hook_source = 'call rc#plugin#incsearch#hook_source()'
-hook_add = 'call rc#plugin#incsearch#hook_add()'
-
-[[plugins]]
-repo = 'haya14busa/incsearch-easymotion.vim'
-on_source = 'incsearch.vim'
-
-[[plugins]]
-repo = 'haya14busa/incsearch-migemo.vim'
-on_source = 'incsearch.vim'
-
-[[plugins]]
-repo = 'haya14busa/incsearch-fuzzy.vim'
-on_source = 'incsearch.vim'
-
-[[plugins]]
-repo = 'haya14busa/vim-asterisk'
-on_map = [['nx', '<Plug>']]
-hook_source = 'call rc#plugin#asterisk#hook_source()'
-hook_add = 'call rc#plugin#asterisk#hook_add()'
-
-[[plugins]]
-repo = 'osyo-manga/vim-anzu'
-on_source = 'incsearch.vim'
-on_map = [['n', '<Plug>']]
-
-[[plugins]]
 repo = 'Shougo/vimfiler.vim'
 depends = 'unite.vim'
 on_cmd = 'VimFiler'

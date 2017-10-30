@@ -1,3 +1,17 @@
+" See also is.vim
+let g:rc#dein#plugins['haya14busa/incsearch.vim'] = {
+\   'on_map': '<Plug>',
+\   'on_func': ['incsearch#go'],
+\   'hook_source': 'call rc#plugin#incsearch#hook_source()',
+\   'hook_add': 'call rc#plugin#incsearch#hook_add()',
+\ }
+
+let s:on_incsearch = { 'on_source': 'incsearch.vim' }
+
+let g:rc#dein#plugins['haya14busa/incsearch-easymotion.vim'] = s:on_incsearch
+let g:rc#dein#plugins['haya14busa/incsearch-migemo.vim'] = s:on_incsearch
+let g:rc#dein#plugins['haya14busa/incsearch-fuzzy.vim'] = s:on_incsearch
+
 function! rc#plugin#incsearch#hook_source() abort
   let g:incsearch#auto_nohlsearch = 1
   let g:incsearch#consistent_n_direction = 1
@@ -15,20 +29,15 @@ function! rc#plugin#incsearch#hook_add() abort
     \ }), get(a:, 1, {}))
   endfunction
 
-  noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
-  noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+  if !has('patch-8.0.1238')
+    noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+    noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+    omap /  <Plug>(incsearch-forward)
+    omap ?  <Plug>(incsearch-backward)
+    noremap ;/ /
+    noremap ;? ?
+  endif
+
   noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
-  omap /  <Plug>(incsearch-forward)
-  omap ?  <Plug>(incsearch-backward)
   omap g/ <Plug>(incsearch-stay)
-
-  noremap ;/ /
-  noremap ;? ?
-
-  map  n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
-  map  N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
-  map  n <Plug>(incsearch-nohl-n)
-  map  N <Plug>(incsearch-nohl-N)
-  nmap n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
-  nmap N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 endfunction
