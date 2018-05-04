@@ -1,4 +1,5 @@
 let g:rc#dein#plugins['junegunn/fzf'] = {
+\   'build': './install --all',
 \   'hook_source': 'call rc#plugin#fzf#hook_source()',
 \   'hook_add': 'call rc#plugin#fzf#hook_add()',
 \ }
