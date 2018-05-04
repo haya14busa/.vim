@@ -1,2 +1,3 @@
-let g:rc#dein#plugins['ynkdir/vim-vimlparser'] = {}
-
+let g:rc#dein#plugins['vim-jp/vim-vimlparser'] = {
+\   'merged': 0,
+\ }
