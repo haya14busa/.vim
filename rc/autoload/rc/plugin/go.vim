@@ -1,8 +1,9 @@
 let g:rc#dein#plugins['fatih/vim-go'] = {
-\   'on_ft': 'go',
 \   'hook_source': 'call rc#plugin#go#hook_source()',
 \   'hook_add': 'call rc#plugin#go#hook_add()',
 \ }
+" \   'on_ft': 'go',
+" \   'on_path': '*.tmpl',
 
 let g:rc#dein#plugins['haya14busa/vim-gofmt'] = {
 \   'hook_source': 'call rc#plugin#go#fmt_hook_source()',
@@ -26,6 +27,11 @@ function! rc#plugin#go#hook_add() abort
   augroup vim-go-quick-test
     autocmd!
     autocmd BufRead,BufNewFile *_test.go nnoremap <buffer> ;qr :GoTestFunc<CR>
+  augroup END
+
+  augroup vim-go-text-tmpl
+    autocmd!
+    autocmd BufRead,BufNewFile *.tmpl set filetype=gotexttmpl
   augroup END
 
   command! GoFmtS call s:gofmt_s()

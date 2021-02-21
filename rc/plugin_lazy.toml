@@ -22,7 +22,8 @@ hook_source = 'call rc#plugin#neocomplete#hook_source()'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
-depends = ['haya14busa-snippets', 'neocomplete.vim']
+# depends = ['haya14busa-snippets', 'neocomplete.vim']
+depends = ['haya14busa-snippets']
 on_i = 1
 on_ft = 'snippet'
 hook_source = 'call rc#plugin#neosnippet#hook_source()'

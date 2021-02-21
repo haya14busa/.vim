@@ -9,13 +9,14 @@ function! s:hl_colorscheme_modify_molokai()
 endfunction
 autocmd MyVimrc ColorScheme * call s:hl_colorscheme_modify_molokai()
 
-set background=dark
+set background=light
 set t_Co=256
 if &t_Co < 256
   colorscheme default
 else
   try
-    colorscheme molokai
+    " colorscheme molokai
+    colorscheme one
   catch
   endtry
 endif

@@ -24,6 +24,7 @@ function! rc#plugin#watchdogs#hook_add() abort
   \   'vim': 0,
   \   'scala': 0,
   \   'typescript': 0,
+  \   'markdown': 0,
   \ }
 endfunction
 

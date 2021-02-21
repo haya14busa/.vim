@@ -68,4 +68,6 @@ autocmd MyVimrc FileType qf call s:on_FileType_quickfix()
 
 nnoremap ;b :<C-u>ls<CR>:b<Space>
 
+tnoremap <Esc><Esc> <C-\><C-n>
+
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker

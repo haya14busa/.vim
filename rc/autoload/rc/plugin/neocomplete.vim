@@ -1,6 +1,6 @@
 function! rc#plugin#neocomplete#hook_source() abort
   " Use neocomplete.
-  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_at_startup = 0
 
   " Use smartcase.
   let g:neocomplete#enable_smart_case = 1

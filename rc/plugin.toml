@@ -3,6 +3,9 @@ repo = 'Shougo/dein.vim'
 merged = 0
 
 [[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
@@ -15,6 +18,9 @@ on_ft = 'toml'
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'rakr/vim-one'
 
 [[plugins]]
 repo = 'itchyny/vim-cursorword'
@@ -33,3 +39,10 @@ repo = 'othree/html5.vim'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'bfrg/vim-jq'
+

@@ -6,7 +6,7 @@ endif
 
 " visibility {{{
 set listchars=tab:▸\ ,
-set list
+set nolist
 set showbreak=\
 
 " hl trailing spaces instead of trail:c
@@ -144,5 +144,7 @@ if v:version >= 704
   set formatoptions+=j
 endif
 " }}}
+
+let g:vim_json_conceal = 0
 
 " vim: expandtab softtabstop=2 shiftwidth=2 foldmethod=marker
