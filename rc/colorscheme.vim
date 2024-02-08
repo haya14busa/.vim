@@ -15,8 +15,8 @@ if &t_Co < 256
   colorscheme default
 else
   try
-    " colorscheme molokai
-    colorscheme one
+    colorscheme molokai
+    " colorscheme one
   catch
   endtry
 endif
