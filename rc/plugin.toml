@@ -46,3 +46,5 @@ repo = 'posva/vim-vue'
 [[plugins]]
 repo = 'bfrg/vim-jq'
 
+[[plugins]]
+repo = 'Shougo/junkfile.vim'
